@@ -1,0 +1,196 @@
+@import "variables.scss";
+
+.btn
+{
+    transition: color 200ms;
+
+    &:hover
+    {
+        color: rgba($color: $color-secondary, $alpha: 1);  
+  
+    }
+
+    &__modif
+    {
+        transition:background-color 300ms;
+        &:hover
+        {
+            background-color: darken($color-accent, 15);
+        }
+        &--3
+        {    
+            cursor: pointer;
+            transition-property: transform;
+            transform: scale(1);
+            transition: transform 300ms;
+
+            &:hover
+            {
+                transform: scale(0.9);
+            }
+        }
+    }
+    
+    
+}
+
+.fleche
+{
+    cursor: pointer;
+    transition-property: transform;
+    transform: scale(1);
+    transition: transform 300ms;
+    &:hover
+    {
+        transform: scale(0.9);
+    }
+}
+.logo_social
+{
+    cursor: pointer;
+    transition-property: transform;
+    transform: scale(1);
+    transition: transform 300ms;
+    &:hover
+    {
+        transform: scale(0.9);
+    }
+}
+
+.service
+{   
+    opacity: 0.7;
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.real, .service_defilant
+{   
+    
+    transition-property: transform;
+    transform: scale(1);
+    transition: transform 300ms;
+    &:hover{
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+
+.allbloc
+{
+    &:target
+    {
+        display: table;
+        -webkit-animation:opacityincrease .5s linear both;
+    }
+  
+}
+
+.closemsg {
+    display: block;
+    margin: auto;
+    height: 0;
+    width: 500px;
+    overflow: visible;
+    text-align: right;
+    z-index: 2;
+    cursor: pointer;
+
+    &:hover::after{
+        transform: scale(0.9);
+        background-color: darken($color-accent, 15);
+    }
+    &:active::after + .contenu{
+        -webkit-animation:opacityincrease .5s linear both reverse;
+    }
+
+  }
+  .closemsg::after {
+    content: "X";
+    display: inline-block;
+    position: relative;
+    right: 20px;
+    top: 20px;
+
+    z-index: 3;
+    color: #ffffff;
+    border: 1px rgba($color: $color-primary, $alpha: 0) solid;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0;
+    background-color: rgba($color: $color-accent, $alpha: 1);
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+
+    transition-property: transform;
+    transition: all 300ms;
+    transform: scale(1);
+
+  }
+  
+
+svg path {
+    animation: waveanim 10s 1s cubic-bezier(0.8, 0, 0.2, 1.2)  both infinite alternate;
+
+}
+svg {
+    height: 220px;
+    width: 100%;
+  
+    
+    z-index: -1;
+    fill: rgba($color: $color-accent, $alpha: 0.5);
+}
+
+
+
+/*-----A mettre dans les effets----*/
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+
+    border-radius: 3px;
+    height: 13px;
+    width: 13px;
+    background: rgba($color: #000000, $alpha: 0);
+    border: 1px solid $color-secondary;
+}
+input[type="checkbox"]:checked {
+    margin: 0px;
+
+    &:before {
+        content: "✓";
+        text-align: center;
+        font-weight: bold;
+
+        color: $color-secondary;
+        font-size: 10px;
+
+        
+    }
+  }
+  /*
+  input[type="checkbox"].condition {
+    display: none;
+  }
+  input[type="checkbox"].condition + label::before {
+ 
+    content: '\f0c8';
+    font-size: 1.2em;  
+    color: #00B7E8;
+    margin-right: 0.3rem  ;
+  }
+  input[type="checkbox"].condition:checked + label::before {
+    content:'\f14a';
+    color: #00B7E8;
+  } */

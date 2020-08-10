@@ -1,0 +1,577 @@
+@import "variables.scss";
+@import "component.scss";
+@import "effect.scss";
+
+@font-face {
+  font-family: "Aaargh";
+  src: url("../../Police_aaargh/Aaargh.eot") format("eot");
+  src: url("../../Police_aaargh/Aaargh.eot?#iefix") format("embedded-opentype"),
+    url("../../Police_aaargh/Aaargh.woff") format("woff"),
+    url("../../Police_aaargh/Aaargh.svg") format("svg"),
+    url("../../Police_aaargh/Aaargh.ttf") format("ttf");
+
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Walkway";
+  src: url("../../Police_walkway/Walkway_SemiBold-webfont.eot") format("eot");
+  src: url("../../Police_walkway/Walkway_SemiBold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../Police_walkway/Walkway_SemiBold-webfont.woff") format("woff"),
+    url("../../Police_walkway/Walkway_SemiBold-webfont.svg") format("svg"),
+    url("../../Police_walkway/Walkway_SemiBold-webfont.ttf") format("ttf");
+
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Walkway_bold";
+  src: url("../../Police_walkway/Walkway_UltraBold-webfont.eot") format("eot");
+  src: url("../../Police_walkway/Walkway_UltraBold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../Police_walkway/Walkway_UltraBold-webfont.woff") format("woff"),
+    url("../../Police_walkway/Walkway_UltraBold-webfont.svg") format("svg"),
+    url("../../Police_walkway/Walkway_UltraBold-webfont.ttf") format("ttf");
+
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: "Walkway", "Segoe UI";
+  width: 100%;
+  height: 100%;
+
+  margin-left: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+
+  background: url("../Images/fond_container1.png") scroll no-repeat;
+  background-position: top right;
+  background-size: 900px;
+}
+em {
+  font-style: normal;
+  color: $color-accent;
+}
+strong {
+  font-weight: bold;
+}
+
+.text_bold {
+  font-family: "Walkway_bold";
+  &--modif {
+    font-size: 18px;
+  }
+}
+
+/*div, section
+{
+    border: 3px solid green;
+    background-color: lightgreen;
+}*/
+
+/*--------INTRODUCTION-----*/
+
+.container {
+    padding: 0 50px;
+}
+
+.container__fond {
+  &--equipe {
+    background: url("../Images/fond_equipe.png") scroll no-repeat;
+    background-position: top right;
+    background-size: 905px;
+    /*@include background(equipe);*/
+  }
+  &--real {
+    background: url("../Images/fond_real.png") scroll no-repeat;
+    background-position: top right;
+    background-size: 1100px 650px;
+    /*@include background(real);*/
+  }
+}
+
+.container {
+  & .intro {
+    margin-top: 80px;
+    &__title {
+      width: 500px;
+      font-size: map-get($font-size, introduction);
+      color: $color-primary;
+    }
+    &__presentation {
+      margin-top: 46px;
+      margin-bottom: 64px;
+      width: 600px;
+      font-size: map-get($font-size, text);
+      color: $color-tertiary;
+      line-height: 30px;
+    }
+    &__social {
+      display: flex;
+      flex-direction: row;
+      margin-top: 60px;
+
+      & img {
+        width: 50px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    width: 250px;
+  }
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: map-get($font-size, menu);
+    margin-left: 17.5%;
+    height: 150px;
+    width: 70%;
+  }
+  &__gradient {
+      background: transparent
+        linear-gradient(180deg, rgba(#000000, 0.75) 0%, rgba(#54545400, 0) 100%)
+        0% 0% no-repeat padding-box;
+
+      border: 1px rgba($color: #000000, $alpha: 0);
+      border-radius: 0px 0px 0px 150px;
+    }
+}
+
+.fleche {
+  position: relative;
+  bottom: 40px;
+  left: 45%;
+  width: 30px;
+  z-index: 10;
+  &__modif {
+    left: 90%;
+    bottom: 120px;
+    &--2 {
+      left: 90%;
+      bottom: 170px;
+    }
+  }
+}
+
+/*-------NOTRE EQUIPE------*/
+
+.notre_equipe {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0px;
+  justify-content: center;
+  margin-bottom: 75px;
+  align-items: center;
+  padding-top: 20px;
+
+  & .equipe_patacom {
+    width: 950px;
+  }
+  &__presentation {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+    &--texte {
+      padding-right: 10px;
+      font-size: map-get($font-size, text);
+      color: $color-tertiary;
+      margin-bottom: 40px;
+      line-height: 30px;
+      & h2 {
+        font-size: map-get($font-size, title);
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+/*-------NOS SERVICES------*/
+
+.nos_services,
+.nos_realisations {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+
+  overflow: hidden;
+  z-index: 1;
+
+  &__listes {
+    position: relative;
+    top: 0px;
+    margin-right: 200px;
+    margin-left: 200px;
+
+    & h2 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: map-get($font-size, title);
+      color: $color-primary;
+    }
+
+    &--images {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      & img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+    & .service p {
+      position: relative;
+      top: -160px;
+      text-align: center;
+      z-index: 2;
+      font-size: map-get($font-size, etiquette);
+      color: $color-secondary;
+      font-family: "Walkway_bold";
+      text-shadow: 0px 0px 6px $color-primary;
+      a {
+        text-transform: none;
+        text-decoration: none;
+        color: $color-secondary;
+      }
+    }
+  }
+  &__listes2 {
+    margin-right: 100px;
+    margin-left: 100px;
+    z-index: 3;
+    & h2 {
+      text-align: center;
+      margin-bottom: 75px;
+      font-size: map-get($font-size, title);
+      color: $color-primary;
+    }
+    &--images {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      & img {
+        width: 250px;
+        height: 230px;
+      }
+      & .equipe {
+        text-align: center;
+        font-size: map-get($font-size, menu);
+        width: 250px;
+      }
+    }
+  }
+  &__listes3 {
+    margin-right: 200px;
+    margin-left: 200px;
+
+    &--images {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 30px;
+      margin-top: 10px;
+
+      & .real {
+        text-align: center;
+        font-size: map-get($font-size, menu);
+        width: 200px;
+        a {
+          font-size: map-get($font-size, etiquette);
+          text-transform: none;
+          text-decoration: none;
+          color: $color-accent;
+        }
+      }
+      & img {
+        width: 60%;
+      }
+    }
+  }
+
+  &__listes4 {
+    margin-top: 30px;
+    z-index: 5;
+    &--images {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 50%;
+      align-items: center;
+
+      & img {
+        width: 200px;
+        height: 200px;
+      }
+
+      & .service_defilant p {
+        position: relative;
+        top: -145px;
+        text-align: center;
+        z-index: 2;
+        font-size: map-get($font-size, etiquette);
+        color: $color-secondary;
+        font-family: "Walkway_bold";
+        text-shadow: 0px 0px 6px $color-primary;
+        a {
+          text-transform: none;
+          text-decoration: none;
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+
+  &__formes {
+    height: 0px;
+  }
+}
+.rectangle {
+  width: 100%;
+  height: 800px;
+  background-color: rgba($color-accent, 0.4);
+
+  position: relative;
+  z-index: -1;
+}
+.ovale {
+  width: 2000px;
+  height: 700px;
+  background: $color-secondary;
+  -webkit-border-radius: 1000px / 350px;
+  -moz-border-radius: 1000px / 350px;
+  -o-border-radius: 1000px / 350px;
+  border-radius: 1000px / 350px;
+  position: relative;
+  top: -450px;
+  left: -300px;
+  text-align: center;
+  z-index: 0;
+}
+
+/*-------CONTACT------*/
+
+.contactez_nous {
+  padding-left: 50px;
+
+  & h2 {
+    font-size: map-get($font-size, title);
+    color: $color-primary;
+  }
+  &__formulaire {
+    margin-top: 60px;
+    background-color: rgba($color: $color-accent, $alpha: 0.9);
+    border: rgba($color: #000000, $alpha: 0);
+    border-radius: 30px;
+    width: 350px;
+    height: 500px;
+    padding-top: 20px;
+    text-align: center;
+    z-index: 3;
+    & .input_1 {
+      border-radius: 3px;
+      margin-top: 5px;
+      border: rgba($color: #000000, $alpha: 0);
+      height: 40px;
+      width: 250px;
+    }
+    & .input_2 {
+      color: $color-secondary;
+      margin-right: 40px;
+      cursor: pointer;
+    }
+    [type="checkbox"] {
+      cursor: pointer;
+    }
+    textarea {
+      border-radius: 3px;
+      margin-top: 10px;
+      border: rgba($color: #000000, $alpha: 0);
+      width: 250px;
+      padding-top: 10px;
+    }
+  }
+}
+
+.map_google {
+  height: 0px;
+  .map {
+    width: 100%;
+    height: 460px;
+    position: relative;
+    top: -260px;
+
+    z-index: -1;
+  }
+}
+.contact__formes {
+  position: relative;
+  bottom: 450px;
+  left: 50%;
+  height: 0px;
+  width: 0px;
+  z-index: 2;
+
+  /*.triangle
+    {
+        display : inline-block;
+        height : 0;
+        width : 0;
+        border-top : 70px solid $color-secondary;
+        border-right : 60px solid transparent;
+        border-left : 60px solid transparent;
+
+        position: relative;
+        top: 0px;
+        right: -20px;
+        -webkit-filter: drop-shadow(0px 2px 5px rgba(0,0,0,.3));
+     filter: drop-shadow(0px 2px 5px rgba(0,0,0,.3));
+    }*/
+
+  .triangle::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+
+    left: 50px;
+    top: 200px;
+
+    border: 2em solid rgba($color: $color-primary, $alpha: 0.3);
+    border-color: transparent transparent $color-secondary $color-secondary;
+
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+
+    box-shadow: -3px 3px 3px 0 rgba($color-primary, 0.3);
+  }
+
+  .rectangle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 450px;
+    height: 200px;
+
+    background-color: $color-secondary;
+    position: relative;
+
+    align-items: center;
+
+    border: 1px solid rgba($color: black, $alpha: 0);
+    border-radius: 30px;
+    box-shadow: 0px 2px 6px rgba($color: $color-primary, $alpha: 0.4);
+    font-size: map-get($font-size, footer);
+
+    & img {
+      width: 150px;
+    }
+  }
+}
+/*-------FOOTER------*/
+.fond_anime {
+  height: 0px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: url(../Images/vague.png) scroll no-repeat;
+  background-size: 100%;
+  position: relative;
+  bottom: 150px;
+
+  color: $color-secondary;
+  font-size: map-get($font-size, footer);
+  align-items: center;
+  z-index: 2;
+
+  height: 180px;
+  padding-top: 100px;
+  position: relative;
+  bottom: -80px;
+
+  &__logo img {
+    width: 250px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+    text-align: left;
+  }
+  &__social {
+    display: flex;
+    flex-direction: row;
+
+    & img {
+      width: 30px;
+      margin-left: 10px;
+      z-index: 3;
+    }
+  }
+}
+
+.service_intro {
+  width: 21%;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+
+  font-size: map-get($font-size, introduction);
+}
+
+.allbloc {
+  display: none;
+  position: absolute;
+  left: 55%;
+  top: 100px;
+  width: 500px;
+
+  & .contenu {
+    margin-top: 23%;
+    background-color: rgba($color: $color-secondary, $alpha: 1);
+    border: 1px solid $color-secondary;
+    border-radius: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    line-height: 20px;
+    text-align: center;
+    ul {
+      margin-bottom: 50px;
+      margin-top: 60px;
+      li {
+        width: 80%;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+    }
+    h2 {
+      font-size: map-get($font-size, etiquette);
+    }
+  }
+}
