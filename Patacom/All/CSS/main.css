@@ -110,9 +110,9 @@
 /*-------BOUTON------*/
 .btn {
   color: rgba(255, 255, 255, 0.5);
-  text-transform: none;
   text-decoration: none;
   border-radius: 20px;
+  width: fit-content;
 }
 .btn__modif {
   padding: 10px 30px;
@@ -143,7 +143,6 @@
 
 .btn__footer {
   color: rgba(255, 255, 255, 0.5);
-  text-transform: none;
   text-decoration: none;
   color: white;
 }
@@ -162,18 +161,14 @@
   border-radius: 3px;
 }
 
-.trait__services {
-  text-align: center;
-  width: 100%;
-  margin-top: -30px;
-  margin-bottom: 20px;
-}
-.trait__services #hr__services {
+#hr__services {
   width: 100px;
   background-color: white;
   height: 3px;
   border: 0;
   border-radius: 3px;
+  margin-top: -30px;
+  margin-bottom: 20px;
 }
 
 .trait__contact {
@@ -312,12 +307,14 @@
   opacity: 1;
 }
 
-.real, .service_defilant {
+.real,
+.service_defilant {
   transition-property: transform;
   transform: scale(1);
   transition: transform 300ms;
 }
-.real:hover, .service_defilant:hover {
+.real:hover,
+.service_defilant:hover {
   opacity: 1;
   transform: scale(1.15);
 }
@@ -380,7 +377,6 @@ svg {
   fill: rgba(229, 112, 65, 0.5);
 }
 
-/*-----A mettre dans les effets----*/
 input[type=checkbox] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -388,7 +384,6 @@ input[type=checkbox] {
   border-radius: 3px;
   height: 13px;
   width: 13px;
-  background: rgba(0, 0, 0, 0);
   border: 1px solid white;
 }
 
@@ -400,24 +395,26 @@ input[type=checkbox]:checked:before {
   text-align: center;
   font-weight: bold;
   color: white;
-  font-size: 10px;
+  font-size: 13px;
+  position: relative;
+  bottom: 3px;
+  left: 1px;
 }
 
-/*
-input[type="checkbox"].condition {
-  display: none;
-}
-input[type="checkbox"].condition + label::before {
+/*input[type="checkbox"].condition {
+    display: none;
+  }
+  input[type="checkbox"].condition + label::before {
 
-  content: '\f0c8';
-  font-size: 1.2em;  
-  color: #00B7E8;
-  margin-right: 0.3rem  ;
-}
-input[type="checkbox"].condition:checked + label::before {
-  content:'\f14a';
-  color: #00B7E8;
-} */
+    content: '\f0c8';
+    font-size: 1.2em;  
+    color: transparent;
+    margin-right: 0.3rem  ;
+  }
+  input[type="checkbox"].condition:checked + label::before {
+    content:'\f14a';
+    color: transparent;
+  } */
 @font-face {
   font-family: "Aaargh";
   src: url("../../Police_aaargh/Aaargh.eot") format("eot");
@@ -456,7 +453,7 @@ body {
   padding-left: 0px;
   margin-top: 0px;
   padding-top: 0px;
-  background: url("../Images/fond_container1.png") scroll no-repeat;
+  background: url("../Images/fond_container1bis.png") scroll no-repeat;
   background-position: top right;
   background-size: 900px;
 }
@@ -483,8 +480,8 @@ strong {
     background-color: lightgreen;
 }*/
 /*--------INTRODUCTION-----*/
-.container {
-  padding: 0 50px;
+.header, .intro {
+  padding-left: 50px;
 }
 
 .container__fond--equipe {
@@ -529,6 +526,14 @@ strong {
 .header {
   display: flex;
   align-items: center;
+  /*&__gradient {
+    background: transparent
+      linear-gradient(180deg, rgba(#000000, 0.75) 0%, rgba(#54545400, 0) 100%)
+      0% 0% no-repeat padding-box;
+
+    border: 1px rgba($color: #000000, $alpha: 0);
+    border-radius: 0px 0px 0px 150px;
+  }*/
 }
 .header__logo {
   width: 250px;
@@ -541,11 +546,6 @@ strong {
   margin-left: 17.5%;
   height: 150px;
   width: 70%;
-}
-.header__gradient {
-  background: transparent linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(84, 84, 84, 0) 100%) 0% 0% no-repeat padding-box;
-  border: 1px rgba(0, 0, 0, 0);
-  border-radius: 0px 0px 0px 150px;
 }
 
 .fleche {
@@ -567,15 +567,14 @@ strong {
 /*-------NOTRE EQUIPE------*/
 .notre_equipe {
   display: flex;
-  flex-direction: row;
-  margin-left: 0px;
   justify-content: center;
   margin-bottom: 75px;
   align-items: center;
   padding-top: 20px;
 }
 .notre_equipe .equipe_patacom {
-  width: 950px;
+  width: 70%;
+  margin-right: 30px;
 }
 .notre_equipe__presentation {
   display: flex;
@@ -587,19 +586,25 @@ strong {
   font-size: 22px;
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 40px;
-  line-height: 30px;
 }
 .notre_equipe__presentation--texte h2 {
   font-size: 40px;
   color: black;
 }
+.notre_equipe__presentation--texte p {
+  line-height: 30px;
+  padding-right: 50px;
+}
 
 /*-------NOS SERVICES------*/
+/*#nos_services
+{
+  background: url(../../../../../rectangle.svg) no-repeat;
+}*/
 .nos_services,
 .nos_realisations {
   display: flex;
   flex-direction: column;
-  flex-wrap: no-wrap;
   overflow: hidden;
   z-index: 1;
 }
@@ -607,8 +612,6 @@ strong {
 .nos_realisations__listes {
   position: relative;
   top: 0px;
-  margin-right: 200px;
-  margin-left: 200px;
 }
 .nos_services__listes h2,
 .nos_realisations__listes h2 {
@@ -620,28 +623,29 @@ strong {
 .nos_services__listes--images,
 .nos_realisations__listes--images {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
+  margin-right: 230px;
+  margin-left: 230px;
 }
 .nos_services__listes--images img,
 .nos_realisations__listes--images img {
   width: 250px;
   height: 250px;
 }
-.nos_services__listes .service p,
-.nos_realisations__listes .service p {
+.nos_services__listes p,
+.nos_realisations__listes p {
   position: relative;
   top: -160px;
   text-align: center;
   z-index: 2;
   font-size: 25px;
-  color: white;
+  /* color: $color-secondary;*/
   font-family: "Walkway_bold";
   text-shadow: 0px 0px 6px black;
 }
-.nos_services__listes .service p a,
-.nos_realisations__listes .service p a {
-  text-transform: none;
+.nos_services__listes p a,
+.nos_realisations__listes p a {
   text-decoration: none;
   color: white;
 }
@@ -755,7 +759,7 @@ strong {
 }
 
 .ovale {
-  width: 2000px;
+  width: 150%;
   height: 700px;
   background: white;
   -webkit-border-radius: 1000px/350px;
@@ -764,14 +768,14 @@ strong {
   border-radius: 1000px/350px;
   position: relative;
   top: -450px;
-  left: -300px;
+  left: -24%;
   text-align: center;
   z-index: 0;
 }
 
 /*-------CONTACT------*/
 .contactez_nous {
-  padding-left: 50px;
+  padding-left: 100px;
 }
 .contactez_nous h2 {
   font-size: 40px;
@@ -824,32 +828,24 @@ strong {
 
 .contact__formes {
   position: relative;
-  bottom: 450px;
+  bottom: 250px;
   left: 50%;
-  height: 0px;
-  width: 0px;
-  z-index: 2;
-  /*.triangle
-    {
-        display : inline-block;
-        height : 0;
-        width : 0;
-        border-top : 70px solid $color-secondary;
-        border-right : 60px solid transparent;
-        border-left : 60px solid transparent;
-
-        position: relative;
-        top: 0px;
-        right: -20px;
-        -webkit-filter: drop-shadow(0px 2px 5px rgba(0,0,0,.3));
-     filter: drop-shadow(0px 2px 5px rgba(0,0,0,.3));
-    }*/
+  display: flex;
+  justify-content: space-around;
+  width: 450px;
+  height: 200px;
+  background-color: white;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+.contact__formes img {
+  width: 150px;
 }
 .contact__formes .triangle::after {
   content: "";
   position: absolute;
-  width: 0px;
-  height: 0px;
   left: 50px;
   top: 200px;
   border: 2em solid rgba(0, 0, 0, 0.3);
@@ -857,23 +853,6 @@ strong {
   transform-origin: 0 0;
   transform: rotate(-45deg);
   box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.3);
-}
-.contact__formes .rectangle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 450px;
-  height: 200px;
-  background-color: white;
-  position: relative;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-radius: 30px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
-  font-size: 15px;
-}
-.contact__formes .rectangle img {
-  width: 150px;
 }
 
 /*-------FOOTER------*/
@@ -883,16 +862,12 @@ strong {
 
 .footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   background: url(../Images/vague.png) scroll no-repeat;
-  background-size: 100%;
-  position: relative;
-  bottom: 150px;
+  background-size: cover;
   color: white;
   font-size: 15px;
   align-items: center;
-  z-index: 2;
   height: 180px;
   padding-top: 100px;
   position: relative;
@@ -905,16 +880,10 @@ strong {
   display: flex;
   flex-direction: column;
   line-height: 25px;
-  text-align: left;
 }
-.footer__social {
-  display: flex;
-  flex-direction: row;
-}
-.footer__social img {
+
+.logo_social {
   width: 30px;
-  margin-left: 10px;
-  z-index: 3;
 }
 
 .service_intro {

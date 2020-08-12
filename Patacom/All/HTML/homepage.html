@@ -6,7 +6,7 @@
     <title>Patacom</title>
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <header class="header">
         <a href="homepage.html" title="Retourner à l'acceuil"
           ><img
@@ -14,7 +14,7 @@
             class="header__logo"
             alt="Logo Patacom"
         /></a>
-        <nav class="header__navbar text_bold header__gradient">
+        <nav class="header__navbar text_bold">
           <a href="homepage.html" class="btn btn__click">AGENCE</a>
           <a href="equipe.html" class="btn">ÉQUIPES</a>
           <a href="services.html" class="btn">SERVICES</a>
@@ -68,34 +68,27 @@
         /></a>
       </section>
       <section class="notre_equipe" id="notre_equipe">
-        <div class="notre_equipe__images">
-          <img
-            src="../Images/gif-equipe-patacom.gif"
-            class="equipe_patacom"
-            alt="Notre equipe"
-          />
+        <img
+          src="../Images/equipe_patacom.png"
+          class="equipe_patacom"
+          alt="Notre equipe"
+        />
 
-          <!--<img src="../Images/notre_equipe2.png" class="gif" alt="Notre equipe" />
-                  <img src="../Images/notre_equipe3.png" class="gif" alt="Notre equipe" />
-                  <img src="../Images/notre_equipe4.png" class="gif" alt="Notre equipe" />-->
-        </div>
-        <div class="notre_equipe__presentation">
-          <div class="notre_equipe__presentation--texte">
-            <h2>NOTRE ÉQUIPE</h2>
-            <div class="trait__equipe"><hr id="hr__equipe" /></div>
-            <p>
-              Chez Patacom', nous avons une passion commune : Vous accompagnez
-              dans les projets qui vous animent au quotidien.<br />
-              Nous sommes 4 collaboratices qui travaillent main dans la main
-              pour atteindre vos objectifs de visibilité et notoriété sur le
-              web.
-            </p>
-          </div>
-          <div>
-            <a href="realisations.html" class="btn btn__modif btn__modif--2"
-              >Nos réalisations</a
-            >
-          </div>
+        <div
+          class="notre_equipe__presentation notre_equipe__presentation--texte"
+        >
+          <h2>NOTRE ÉQUIPE</h2>
+          <div class="trait__equipe"><hr id="hr__equipe" /></div>
+          <p>
+            Chez Patacom', nous avons une passion commune : Vous accompagnez
+            dans les projets qui vous animent au quotidien.<br />
+            Nous sommes 4 collaboratices qui travaillent main dans la main pour
+            atteindre vos objectifs de visibilité et notoriété sur le web.
+          </p>
+
+          <a href="realisations.html" class="btn btn__modif btn__modif--2"
+            >Nos réalisations</a
+          >
         </div>
       </section>
       <a href="#nos_services">
@@ -111,10 +104,17 @@
           <div class="rectangle"></div>
           <div class="ovale"></div>
         </div>
+        <!--
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="ok">
+          <rect fill-opacity="0.4" id="svg_1" height="221" width="725.34409" y="155" x="0" stroke-width="0" fill="#e57041" stroke="#000000"/>
+          <rect stroke="#000000" id="svg_2" height="0" width="1" y="99" x="534" stroke-width="0" fill="#FF0000"/>
+          <ellipse id="svg_3" ry="120.43484" rx="440.45483" cy="404.97884" cx="365.70425" stroke-width="0" fill="#ffffff" stroke="#000000"/>
+          <ellipse stroke="#000000" id="svg_5" ry="0" rx="0" cy="439.03912" cx="362.66906" stroke-width="0" fill="#FF0000"/>
+        </svg>-->
 
         <div class="nos_services__listes">
           <h2>NOS SERVICES</h2>
-          <div class="trait__services"><hr id="hr__services" /></div>
+          <hr id="hr__services" />
 
           <div class="nos_services__listes--images">
             <div class="service">
@@ -146,9 +146,7 @@
               /></a>
               <p><a href="services.html#bloc_webmarketing">WEBMARKETING</a></p>
             </div>
-          </div>
 
-          <div class="nos_services__listes--images">
             <div class="service">
               <a href="services.html#bloc_comprint">
                 <img src="../Images/nos_services4.png" class="" alt="COM'PRINT"
@@ -180,102 +178,96 @@
           class="fleche fleche__modif--2"
       /></a>
 
-      <section id="contact">
-        <div class="contactez_nous">
-          <h2 class="">Contactez-nous</h2>
-          <div class="trait__contact"><hr id="hr__contact" /></div>
+      <section id="contact" class="contactez_nous">
+        <h2 class="">Contactez-nous</h2>
+        <div class="trait__contact"><hr id="hr__contact" /></div>
 
-          <div class="contactez_nous__formulaire">
-            <form method="post" action="traitement.php">
-              <p>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="input_1"
-                  placeholder="   Nom et Prénom"
-                  size="30"
-                  maxlength="30"
-                  required
-                />
-              </p>
+        <form
+          method="post"
+          action="traitement.php"
+          class="contactez_nous__formulaire"
+        >
+          <p>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="input_1"
+              placeholder="   Nom et Prénom"
+              size="30"
+              maxlength="30"
+              required
+            />
+          </p>
 
-              <p>
-                <input
-                  type="text"
-                  name="entreprise"
-                  id="entreprise"
-                  class="input_1"
-                  placeholder="   Entreprise"
-                  maxlength="30"
-                  size="30"
-                  required
-                />
-              </p>
+          <p>
+            <input
+              type="text"
+              name="entreprise"
+              id="entreprise"
+              class="input_1"
+              placeholder="   Entreprise"
+              maxlength="30"
+              size="30"
+              required
+            />
+          </p>
 
-              <p>
-                <input
-                  type="tel"
-                  name="tel"
-                  id="tel"
-                  placeholder="   Téléphone"
-                  class="input_1"
-                  size="30"
-                  minlenght="10"
-                  maxlength="10"
-                  pattern="[0-9]{10}"
-                  required
-                />
-              </p>
+          <p>
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="   Téléphone"
+              class="input_1"
+              size="30"
+              minlenght="10"
+              maxlength="10"
+              pattern="[0-9]{10}"
+              required
+            />
+          </p>
 
-              <p>
-                <textarea
-                  name="message"
-                  id="message"
-                  rows="8"
-                  cols="28"
-                  placeholder="   MESSAGE"
-                  maxlength="200"
-                  required
-                ></textarea>
-              </p>
+          <p>
+            <textarea
+              name="message"
+              id="message"
+              rows="8"
+              cols="28"
+              placeholder="   MESSAGE"
+              maxlength="200"
+              required
+            ></textarea>
+          </p>
 
-              <p>
-                <input
-                  type="checkbox"
-                  name="condition"
-                  id="condition"
-                  required
-                />
-                <label for="condition" class="input_2"
-                  >I agree with the all conditions</label
-                >
-              </p>
+          <p>
+            <input type="checkbox" name="condition" id="condition" required />
+            <label for="condition" class="input_2"
+              >I agree with the all conditions</label
+            >
+          </p>
 
-              <p>
-                <input type="submit" value="Envoyer" class="btn__modif--3" />
-              </p>
-            </form>
-          </div>
-        </div>
+          <p>
+            <input type="submit" value="Envoyer" class="btn__modif--3" />
+          </p>
+        </form>
       </section>
 
       <div class="contact__formes">
-        <div class="rectangle">
-          <div>
-            <img src="../Images/icone_contact.png" alt="contact" />
-          </div>
-          <div class="footer__menu">
-            <div>
-              <span class="text_bold text_bold--modif"
-                ><em>VENEZ NOUS RENCONTRER</em></span
-              >
-            </div>
-            <div>17, rue Albin Haller</div>
-            <div>86000 POITIERS</div>
-            <div>E-mail : contact@patacom.fr</div>
-          </div>
+        <img src="../Images/icone_contact.png" alt="contact" />
+
+        <div class="footer__menu">
+          <span class="text_bold text_bold--modif"
+            ><em>VENEZ NOUS RENCONTRER</em></span
+          >
+
+          <p>
+            17, rue Albin Haller<br />
+            86000 POITIERS<br />
+            E-mail : contact@patacom.fr
+          </p>
         </div>
+
         <div class="triangle"></div>
       </div>
 
@@ -299,56 +291,48 @@
       </div>
 
       <footer class="footer">
-        <div class="footer__logo">
-          <a href="homepage.html" title="Retourner à l'acceuil"
-            ><img src="../Images/logo_patacom_black.png" alt="Logo_patacom"
-          /></a>
-        </div>
+        <a
+          href="homepage.html"
+          title="Retourner à l'acceuil"
+          class="footer__logo"
+          ><img src="../Images/logo_patacom_black.png" alt="Logo_patacom"
+        /></a>
 
-        <div class="footer__menu">
-          <div><strong>Contact</strong></div>
-          <div>17, rue Albin Haller</div>
-          <div>86000 POITIERS</div>
-          <div>E-mail : contact@patacom.fr</div>
-          <div>Mentions légales</div>
-        </div>
-        <div class="footer__menu">
-          <div><strong>Menu</strong></div>
-          <div><a href="equipe.html" class="btn__footer">Notre équipe</a></div>
-          <div>
-            <a href="services.html" class="btn__footer">Nos services</a>
-          </div>
-          <div>
-            <a href="realisations.html" class="btn__footer">Nos réalisations</a>
-          </div>
-          <div>
-            <a href="homepage.html#contact" class="btn__footer"
-              >Nous contacter</a
-            >
-          </div>
-        </div>
+        <p class="footer__menu">
+          <span class="text_bold">Contact</span>
+          17, rue Albin Haller<br />
+          86000 POITIERS<br />
+          E-mail : contact@patacom.fr<br />
+          Mentions légales
+        </p>
+        <nav class="footer__menu">
+          <span class="text_bold">Menu</span>
+          <a href="equipe.html" class="btn__footer">Notre équipe</a>
+
+          <a href="services.html" class="btn__footer">Nos services</a>
+
+          <a href="realisations.html" class="btn__footer">Nos réalisations</a>
+
+          <a href="homepage.html#contact" class="btn__footer">Nous contacter</a>
+        </nav>
 
         <div>
           <p>Rejoignez-nous</p>
-          <div class="footer__social">
-            <a
-              href="https://www.facebook.com/PataCom-114818073394341"
-              title="Rejoignez nous sur Facebook !"
-              target="blank"
-              ><img src="../Images/fb.png" class="logo_social" alt="Facebook"
-            /></a>
-            <a
-              href="https://www.instagram.com/agence_patacom/?hl=fr"
-              title="Rejoignez nous sur Instagram !"
-              target="blank"
-              ><img
-                src="../Images/insta.png"
-                class="logo_social"
-                alt="Instagram"
-            /></a>
-          </div>
+
+          <a
+            href="https://www.facebook.com/PataCom-114818073394341"
+            title="Rejoignez nous sur Facebook !"
+            target="blank"
+            ><img src="../Images/fb.png" alt="Facebook" class="logo_social"
+          /></a>
+          <a
+            href="https://www.instagram.com/agence_patacom/?hl=fr"
+            title="Rejoignez nous sur Instagram !"
+            target="blank"
+            ><img src="../Images/insta.png" alt="Instagram" class="logo_social"
+          /></a>
         </div>
       </footer>
-    </div>
+    </main>
   </body>
 </html>

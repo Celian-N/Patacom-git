@@ -57,7 +57,7 @@ body {
   margin-top: 0px;
   padding-top: 0px;
 
-  background: url("../Images/fond_container1.png") scroll no-repeat;
+  background: url("../Images/fond_container1bis.png") scroll no-repeat;
   background-position: top right;
   background-size: 900px;
 }
@@ -84,8 +84,8 @@ strong {
 
 /*--------INTRODUCTION-----*/
 
-.container {
-    padding: 0 50px;
+.header, .intro,{
+  padding-left: 50px;
 }
 
 .container__fond {
@@ -148,14 +148,14 @@ strong {
     height: 150px;
     width: 70%;
   }
-  &__gradient {
-      background: transparent
-        linear-gradient(180deg, rgba(#000000, 0.75) 0%, rgba(#54545400, 0) 100%)
-        0% 0% no-repeat padding-box;
+  /*&__gradient {
+    background: transparent
+      linear-gradient(180deg, rgba(#000000, 0.75) 0%, rgba(#54545400, 0) 100%)
+      0% 0% no-repeat padding-box;
 
-      border: 1px rgba($color: #000000, $alpha: 0);
-      border-radius: 0px 0px 0px 150px;
-    }
+    border: 1px rgba($color: #000000, $alpha: 0);
+    border-radius: 0px 0px 0px 150px;
+  }*/
 }
 
 .fleche {
@@ -178,15 +178,14 @@ strong {
 
 .notre_equipe {
   display: flex;
-  flex-direction: row;
-  margin-left: 0px;
   justify-content: center;
   margin-bottom: 75px;
   align-items: center;
   padding-top: 20px;
 
   & .equipe_patacom {
-    width: 950px;
+    width: 70%;
+    margin-right: 30px;
   }
   &__presentation {
     display: flex;
@@ -197,22 +196,29 @@ strong {
       font-size: map-get($font-size, text);
       color: $color-tertiary;
       margin-bottom: 40px;
-      line-height: 30px;
+
       & h2 {
         font-size: map-get($font-size, title);
         color: $color-primary;
+      }
+      & p {
+        line-height: 30px;
+        padding-right: 50px;
       }
     }
   }
 }
 
 /*-------NOS SERVICES------*/
+/*#nos_services
+{
+  background: url(../../../../../rectangle.svg) no-repeat;
+}*/
 
 .nos_services,
 .nos_realisations {
   display: flex;
   flex-direction: column;
-  flex-wrap: no-wrap;
 
   overflow: hidden;
   z-index: 1;
@@ -220,8 +226,6 @@ strong {
   &__listes {
     position: relative;
     top: 0px;
-    margin-right: 200px;
-    margin-left: 200px;
 
     & h2 {
       text-align: center;
@@ -232,25 +236,26 @@ strong {
 
     &--images {
       display: flex;
-      flex-direction: row;
       justify-content: space-around;
+      flex-wrap: wrap;
+      margin-right: 230px;
+      margin-left: 230px;
 
       & img {
         width: 250px;
         height: 250px;
       }
     }
-    & .service p {
+    & p {
       position: relative;
       top: -160px;
       text-align: center;
       z-index: 2;
       font-size: map-get($font-size, etiquette);
-      color: $color-secondary;
+     /* color: $color-secondary;*/
       font-family: "Walkway_bold";
       text-shadow: 0px 0px 6px $color-primary;
-      a {
-        text-transform: none;
+      a{
         text-decoration: none;
         color: $color-secondary;
       }
@@ -346,7 +351,7 @@ strong {
 
   &__formes {
     height: 0px;
-  }
+  } 
 }
 .rectangle {
   width: 100%;
@@ -357,7 +362,7 @@ strong {
   z-index: -1;
 }
 .ovale {
-  width: 2000px;
+  width: 150%;
   height: 700px;
   background: $color-secondary;
   -webkit-border-radius: 1000px / 350px;
@@ -366,7 +371,7 @@ strong {
   border-radius: 1000px / 350px;
   position: relative;
   top: -450px;
-  left: -300px;
+  left: -24%;
   text-align: center;
   z-index: 0;
 }
@@ -374,7 +379,7 @@ strong {
 /*-------CONTACT------*/
 
 .contactez_nous {
-  padding-left: 50px;
+  padding-left: 100px;
 
   & h2 {
     font-size: map-get($font-size, title);
@@ -415,7 +420,8 @@ strong {
   }
 }
 
-.map_google {
+
+.map_google{
   height: 0px;
   .map {
     width: 100%;
@@ -426,62 +432,23 @@ strong {
     z-index: -1;
   }
 }
-.contact__formes {
-  position: relative;
-  bottom: 450px;
-  left: 50%;
-  height: 0px;
-  width: 0px;
-  z-index: 2;
 
-  /*.triangle
-    {
-        display : inline-block;
-        height : 0;
-        width : 0;
-        border-top : 70px solid $color-secondary;
-        border-right : 60px solid transparent;
-        border-left : 60px solid transparent;
-
-        position: relative;
-        top: 0px;
-        right: -20px;
-        -webkit-filter: drop-shadow(0px 2px 5px rgba(0,0,0,.3));
-     filter: drop-shadow(0px 2px 5px rgba(0,0,0,.3));
-    }*/
-
-  .triangle::after {
-    content: "";
-    position: absolute;
-    width: 0px;
-    height: 0px;
-
-    left: 50px;
-    top: 200px;
-
-    border: 2em solid rgba($color: $color-primary, $alpha: 0.3);
-    border-color: transparent transparent $color-secondary $color-secondary;
-
-    transform-origin: 0 0;
-    transform: rotate(-45deg);
-
-    box-shadow: -3px 3px 3px 0 rgba($color-primary, 0.3);
-  }
-
-  .rectangle {
+  .contact__formes {
+    position: relative;
+    bottom: 250px;
+    left: 50%;
+    
     display: flex;
-    flex-direction: row;
+ 
     justify-content: space-around;
 
     width: 450px;
     height: 200px;
 
     background-color: $color-secondary;
-    position: relative;
 
     align-items: center;
 
-    border: 1px solid rgba($color: black, $alpha: 0);
     border-radius: 30px;
     box-shadow: 0px 2px 6px rgba($color: $color-primary, $alpha: 0.4);
     font-size: map-get($font-size, footer);
@@ -489,25 +456,36 @@ strong {
     & img {
       width: 150px;
     }
+    .triangle::after {
+      content: "";
+      position: absolute;
+  
+      left: 50px;
+      top:200px;
+  
+      border: 2em solid rgba($color: $color-primary, $alpha: 0.3);
+      border-color: transparent transparent $color-secondary $color-secondary;
+  
+      transform-origin: 0 0;
+      transform: rotate(-45deg);
+  
+      box-shadow: -3px 3px 3px 0 rgba($color-primary, 0.3);
+    }
   }
-}
+
 /*-------FOOTER------*/
 .fond_anime {
   height: 0px;
 }
 .footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   background: url(../Images/vague.png) scroll no-repeat;
-  background-size: 100%;
-  position: relative;
-  bottom: 150px;
+  background-size: cover;
 
   color: $color-secondary;
   font-size: map-get($font-size, footer);
   align-items: center;
-  z-index: 2;
 
   height: 180px;
   padding-top: 100px;
@@ -522,18 +500,12 @@ strong {
     display: flex;
     flex-direction: column;
     line-height: 25px;
-    text-align: left;
   }
-  &__social {
-    display: flex;
-    flex-direction: row;
 
-    & img {
-      width: 30px;
-      margin-left: 10px;
-      z-index: 3;
-    }
-  }
+}
+.logo_social {
+
+    width: 30px;
 }
 
 .service_intro {

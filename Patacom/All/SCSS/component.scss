@@ -7,6 +7,7 @@
    
     @include link;
     border-radius: 20px;
+    width: fit-content;
     
     &__modif
     {
@@ -66,23 +67,19 @@
 }
 }
 
-.trait__services
-{
-    text-align: center;
-    width: 100%;
-    margin-top: -30px;
-    margin-bottom: 20px;
-    
 
-    #hr__services
+
+#hr__services
 {
 	width:100px;
 	background-color: $color-secondary;
     height: 3px;
     border: 0;
     border-radius: 3px;
+    margin-top: -30px;
+    margin-bottom: 20px;
 }
-}
+
 
 .trait__contact
 {
