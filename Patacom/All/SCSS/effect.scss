@@ -64,7 +64,7 @@
   }
 }
 
-.allbloc {
+.content {
   &:target {
     display: table;
     -webkit-animation: opacityincrease 0.5s linear both;
@@ -73,13 +73,11 @@
 
 .closemsg {
   display: block;
-  margin: auto;
   height: 0;
-  width: 500px;
-  overflow: visible;
   text-align: right;
-  z-index: 2;
   cursor: pointer;
+  position: relative;
+    top: -30px;
 
   &:hover::after {
     transform: scale(0.9);
@@ -96,15 +94,13 @@
   right: 20px;
   top: 20px;
 
-  z-index: 3;
   color: #ffffff;
-  border: 1px rgba($color: $color-primary, $alpha: 0) solid;
   border-radius: 40px;
   width: 40px;
   height: 40px;
   line-height: 40px;
   text-align: center;
-  margin: 0;
+  
   background-color: rgba($color: $color-accent, $alpha: 1);
   font-weight: bold;
   font-size: 20px;
