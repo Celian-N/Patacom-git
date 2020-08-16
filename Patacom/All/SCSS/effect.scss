@@ -12,7 +12,7 @@
     &:hover {
       background-color: darken($color-accent, 15);
     }
-    &--3 {
+    &--send {
       cursor: pointer;
       transition-property: transform;
       transform: scale(1);
@@ -25,7 +25,7 @@
   }
 }
 
-.fleche {
+.arrow {
   cursor: pointer;
   transition-property: transform;
   transform: scale(1);

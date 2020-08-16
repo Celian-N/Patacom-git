@@ -88,8 +88,8 @@ strong {
   padding-left: 50px;
 }
 
-.container__fond {
-  &--equipe {
+.container__back {
+  &--team {
     background: url("../Images/fond_equipe.png") scroll no-repeat;
     background-position: top right;
     background-size: 905px;
@@ -158,7 +158,7 @@ strong {
   }*/
 }
 
-.fleche {
+.arrow {
   position: relative;
   bottom: 40px;
   left: 45%;
@@ -176,14 +176,14 @@ strong {
 
 /*-------NOTRE EQUIPE------*/
 
-.notre_equipe {
+.our_team {
   display: flex;
   justify-content: center;
   margin-bottom: 75px;
   align-items: center;
   padding-top: 20px;
 
-  & .equipe_patacom {
+  & .team_patacom {
     width: 70%;
     margin-right: 30px;
   }
@@ -191,7 +191,7 @@ strong {
     display: flex;
     flex-direction: column;
     padding-right: 30px;
-    &--texte {
+    &--text {
       padding-right: 10px;
       font-size: map-get($font-size, text);
       color: $color-tertiary;
@@ -215,7 +215,7 @@ strong {
   background: url(../../../../../rectangle.svg) no-repeat;
 }*/
 
-.nos_services,
+.our_services,
 .nos_realisations {
   display: flex;
   flex-direction: column;
@@ -223,7 +223,7 @@ strong {
   overflow: hidden;
   z-index: 1;
 
-  &__listes {
+  &__list {
     position: relative;
     top: 0px;
 
@@ -234,7 +234,7 @@ strong {
       color: $color-primary;
     }
 
-    &--images {
+    &--picture {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
@@ -349,7 +349,7 @@ strong {
     }
   }
 
-  &__formes {
+  &__shapes {
     height: 0px;
   } 
 }
@@ -378,14 +378,14 @@ strong {
 
 /*-------CONTACT------*/
 
-.contactez_nous {
+.contact_us {
   padding-left: 100px;
 
   & h2 {
     font-size: map-get($font-size, title);
     color: $color-primary;
   }
-  &__formulaire {
+  &__form {
     margin-top: 60px;
     background-color: rgba($color: $color-accent, $alpha: 0.9);
     border: rgba($color: #000000, $alpha: 0);
@@ -433,7 +433,7 @@ strong {
   }
 }
 
-  .contact__formes {
+  .contact__shapes {
     position: relative;
     bottom: 250px;
     left: 50%;
@@ -474,7 +474,7 @@ strong {
   }
 
 /*-------FOOTER------*/
-.fond_anime {
+.back_anime {
   height: 0px;
 }
 .footer {

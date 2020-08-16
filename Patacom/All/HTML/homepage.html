@@ -16,7 +16,7 @@
         /></a>
         <nav class="header__navbar text_bold">
           <a href="homepage.html" class="btn btn__click">AGENCE</a>
-          <a href="equipe.html" class="btn">ÉQUIPES</a>
+          <a href="team.html" class="btn">ÉQUIPES</a>
           <a href="services.html" class="btn">SERVICES</a>
           <a href="realisations.html" class="btn">RÉALISATIONS</a>
           <a href="homepage.html#contact" class="btn btn__modif">CONTACT</a>
@@ -34,7 +34,7 @@
           bénéficier de la recette parfaite modelée selon vos désirs.
         </p>
 
-        <a href="equipe.html" class="btn btn__modif btn__modif--2"
+        <a href="team.html" class="btn btn__modif btn__modif--link"
           >Qui sommes nous ?</a
         >
 
@@ -59,26 +59,24 @@
           /></a>
         </div>
 
-        <a href="#notre_equipe">
+        <a href="#our_team">
           <img
             src="../Images/fleche.png"
             alt="fleche"
             title="Continuez en bas"
-            class="fleche"
+            class="arrow"
         /></a>
       </section>
-      <section class="notre_equipe" id="notre_equipe">
+      <section class="our_team" id="our_team">
         <img
           src="../Images/equipe_patacom.png"
-          class="equipe_patacom"
+          class="team_patacom"
           alt="Notre equipe"
         />
 
-        <div
-          class="notre_equipe__presentation notre_equipe__presentation--texte"
-        >
+        <div class="our_team__presentation our_team__presentation--text">
           <h2>NOTRE ÉQUIPE</h2>
-          <div class="trait__equipe"><hr id="hr__equipe" /></div>
+          <div class="line__team"><hr id="hr__team" /></div>
           <p>
             Chez Patacom', nous avons une passion commune : Vous accompagnez
             dans les projets qui vous animent au quotidien.<br />
@@ -86,21 +84,21 @@
             atteindre vos objectifs de visibilité et notoriété sur le web.
           </p>
 
-          <a href="realisations.html" class="btn btn__modif btn__modif--2"
+          <a href="realisations.html" class="btn btn__modif btn__modif--link"
             >Nos réalisations</a
           >
         </div>
       </section>
-      <a href="#nos_services">
+      <a href="#our_services">
         <img
           src="../Images/fleche.png"
           alt="fleche"
           title="Continuez en bas"
-          class="fleche fleche__modif"
+          class="arrow arrow__modif"
       /></a>
 
-      <section class="nos_services" id="nos_services">
-        <div class="nos_services__formes">
+      <section class="our_services" id="our_services">
+        <div class="our_services__shapes">
           <div class="rectangle"></div>
           <div class="ovale"></div>
         </div>
@@ -112,58 +110,49 @@
           <ellipse stroke="#000000" id="svg_5" ry="0" rx="0" cy="439.03912" cx="362.66906" stroke-width="0" fill="#FF0000"/>
         </svg>-->
 
-        <div class="nos_services__listes">
+        <div class="our_services__list">
           <h2>NOS SERVICES</h2>
           <hr id="hr__services" />
 
-          <div class="nos_services__listes--images">
+          <div class="our_services__list--picture">
             <div class="service">
               <a href="services.html#bloc_identite">
-                <img
-                  src="../Images/nos_services1.png"
-                  class="nos_services__images1--1"
-                  alt="IDENTITÉ"
+                <img src="../Images/nos_services1.png" alt="IDENTITÉ"
               /></a>
               <p><a href="services.html#bloc_identite">IDENTITÉ</a></p>
             </div>
 
             <div class="service">
               <a href="services.html#bloc_audit">
-                <img
-                  src="../Images/nos_services2.png"
-                  class="nos_services__images1--2 lien"
-                  alt="AUDIT"
+                <img src="../Images/nos_services2.png" alt="AUDIT"
               /></a>
               <p><a href="services.html#bloc_audit">AUDIT</a></p>
             </div>
 
             <div class="service">
               <a href="services.html#bloc_webmarketing">
-                <img
-                  src="../Images/nos_services3.png"
-                  class="nos_services__images1--3"
-                  alt="WEBMARKETING"
+                <img src="../Images/nos_services3.png" alt="WEBMARKETING"
               /></a>
               <p><a href="services.html#bloc_webmarketing">WEBMARKETING</a></p>
             </div>
 
             <div class="service">
               <a href="services.html#bloc_comprint">
-                <img src="../Images/nos_services4.png" class="" alt="COM'PRINT"
+                <img src="../Images/nos_services4.png" alt="COM'PRINT"
               /></a>
               <p><a href="services.html#bloc_comprint">COM'PRINT</a></p>
             </div>
 
             <div class="service">
               <a href="services.html#bloc_siteweb">
-                <img src="../Images/nos_services5.png" class="" alt="SITE WEB"
+                <img src="../Images/nos_services5.png" alt="SITE WEB"
               /></a>
               <p><a href="services.html#bloc_siteweb">SITE WEB</a></p>
             </div>
 
             <div class="service">
               <a href="services.html#bloc_comweb">
-                <img src="../Images/nos_services6.png" class="" alt="COM'WEB"
+                <img src="../Images/nos_services6.png"  alt="COM'WEB"
               /></a>
               <p><a href="services.html#bloc_comweb">COM'WEB</a></p>
             </div>
@@ -175,17 +164,17 @@
           src="../Images/fleche.png"
           alt="fleche"
           title="Continuez en bas"
-          class="fleche fleche__modif--2"
+          class="arrow arrow__modif--2"
       /></a>
 
-      <section id="contact" class="contactez_nous">
-        <h2 class="">Contactez-nous</h2>
-        <div class="trait__contact"><hr id="hr__contact" /></div>
+      <section id="contact" class="contact_us">
+        <h2>Contactez-nous</h2>
+        <div class="line__contact"><hr id="hr__contact" /></div>
 
         <form
           method="post"
           action="traitement.php"
-          class="contactez_nous__formulaire"
+          class="contact_us__form"
         >
           <p>
             <input
@@ -248,12 +237,12 @@
           </p>
 
           <p>
-            <input type="submit" value="Envoyer" class="btn__modif--3" />
+            <input type="submit" value="Envoyer" class="btn__modif--send" />
           </p>
         </form>
       </section>
 
-      <div class="contact__formes">
+      <div class="contact__shapes">
         <img src="../Images/icone_contact.png" alt="contact" />
 
         <div class="footer__menu">
@@ -284,7 +273,7 @@
         ></iframe>
       </div>
 
-      <div class="fond_anime">
+      <div class="back_anime">
         <svg xmlns="http://www.w3.org/2000/svg">
           <path></path>
         </svg>
@@ -307,7 +296,7 @@
         </p>
         <nav class="footer__menu">
           <span class="text_bold">Menu</span>
-          <a href="equipe.html" class="btn__footer">Notre équipe</a>
+          <a href="team.html" class="btn__footer">Notre équipe</a>
 
           <a href="services.html" class="btn__footer">Nos services</a>
 

@@ -5,7 +5,8 @@
 .btn
 {
    
-    @include link;
+    text-decoration: none;
+    color: rgba($color: $color-secondary, $alpha: 0.5);
     border-radius: 20px;
     width: fit-content;
     
@@ -14,11 +15,11 @@
         padding: 10px 30px;
         background-color: $color-accent;
         color: rgba($color: $color-secondary, $alpha: 1);
-        &--2
+        &--link
         {
             font-size: map-get($font-size, text);
         }
-        &--3
+        &--send
         {
             margin-top: 20px;
             color: $color-accent;
@@ -44,20 +45,20 @@
 } 
 .btn__footer
 {
-    @include link;
+    text-decoration: none;
     color: rgba($color: $color-secondary, $alpha: 1.0);
 }
 
 /*-----TRAITS----*/
 
 
-.trait__equipe
+.line__team
 {
     text-align: left;
     width: 200px;
     margin-top: -20px;
 
-    #hr__equipe
+    #hr__team
 {
 	width:200px;
 	background-color: $color-accent;
@@ -81,7 +82,7 @@
 }
 
 
-.trait__contact
+.line__contact
 {
     text-align: left;
     width: 100px;

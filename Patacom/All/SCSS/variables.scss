@@ -29,12 +29,6 @@ $font-size: (menu:20px, introduction:40px, title:40px, text:22px, etiquette:25px
   background-size: map-get($fond, bgs);
 }*/
 
-@mixin link
-{
-    color: rgba($color: $color-secondary, $alpha: 0.5);
-    text-decoration: none;
-}
-
 @mixin pseudo-pos 
 {
     content: ""; /* Si non ne marche pas*/
