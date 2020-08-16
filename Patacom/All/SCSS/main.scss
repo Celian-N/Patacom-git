@@ -56,7 +56,8 @@ body {
   padding-left: 0px;
   margin-top: 0px;
   padding-top: 0px;
-
+}
+.body__back{
   background: url("../Images/fond_container1bis.png") scroll no-repeat;
   background-position: top right;
   background-size: 900px;
@@ -216,7 +217,7 @@ strong {
 }*/
 
 .our_services,
-.nos_realisations {
+.our_realisations {
   display: flex;
   flex-direction: column;
 
@@ -261,9 +262,9 @@ strong {
       }
     }
   }
-  &__listes2 {
-    margin-right: 100px;
-    margin-left: 100px;
+  &__list2 {
+    margin-right: 50px;
+    margin-left: 50px;
     z-index: 3;
     & h2 {
       text-align: center;
@@ -271,27 +272,27 @@ strong {
       font-size: map-get($font-size, title);
       color: $color-primary;
     }
-    &--images {
+    &--pictures {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
+      flex-wrap: wrap;
 
       & img {
-        width: 250px;
         height: 230px;
       }
-      & .equipe {
+      & .team {
         text-align: center;
         font-size: map-get($font-size, menu);
         width: 250px;
+        margin: 0 20px;
       }
     }
   }
-  &__listes3 {
+  &__list3 {
     margin-right: 200px;
     margin-left: 200px;
 
-    &--images {
+    &--pictures {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
