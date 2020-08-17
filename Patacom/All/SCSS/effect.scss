@@ -24,6 +24,12 @@
     }
   }
 }
+.btn_burger{
+    transition:color 200ms;
+    &:hover{
+        color: $color-primary;
+    }
+}
 
 .arrow {
   cursor: pointer;

@@ -22,6 +22,24 @@
           <a href="homepage.html#contact" class="btn btn__modif">CONTACT</a>
         </nav>
       </header>
+      <!-----MENU BURGER----->
+      <input type="checkbox" id="openSidebarMenu" />
+      <label for="openSidebarMenu" class="sidebarIconToggle">
+        <span class="spinner diagonal_up"></span>
+        <span class="spinner horizontal"></span>
+        <span class="spinner diagonal_down"></span>
+      </label>
+
+      <nav class="sidebarMenu text_bold">
+        <a href="homepage.html" class="btn_burger">AGENCE</a>
+        <a href="team.html" class="btn_burger">ÉQUIPES</a>
+        <a href="services.html" class="btn_burger btn_burger__click"
+          >SERVICES</a
+        >
+        <a href="realisations.html" class="btn_burger">RÉALISATIONS</a>
+        <a href="homepage.html#contact" class="btn_burger">CONTACT</a>
+      </nav>
+      <!---------------->
 
       <section class="intro">
         <h1 class="intro__title">
@@ -152,7 +170,7 @@
 
             <div class="service">
               <a href="services.html#bloc_comweb">
-                <img src="../Images/nos_services6.png"  alt="COM'WEB"
+                <img src="../Images/nos_services6.png" alt="COM'WEB"
               /></a>
               <p><a href="services.html#bloc_comweb">COM'WEB</a></p>
             </div>
@@ -171,11 +189,7 @@
         <h2>Contactez-nous</h2>
         <div class="line__contact"><hr id="hr__contact" /></div>
 
-        <form
-          method="post"
-          action="traitement.php"
-          class="contact_us__form"
-        >
+        <form method="post" action="traitement.php" class="contact_us__form">
           <p>
             <input
               type="text"

@@ -137,7 +137,6 @@
 .btn__click {
   border-bottom: 3px solid #E57041;
   border-radius: 2px;
-  /*padding-bottom: 2px;*/
   color: white;
 }
 
@@ -183,19 +182,6 @@
   border-radius: 3px;
 }
 
-/*.line_bottom
-{
-    text-align: center;
-    width: 80%;
-    margin-top: 50px;
-    position: relative;
-    left: 10%;
-    &--2
-    {
-        margin-top: 0px;
-    }
-
-}*/
 #hr__bottom {
   width: 80%;
   background-color: #E57041;
@@ -203,6 +189,103 @@
   border: 0;
   border-radius: 3px;
   margin-top: 50px;
+}
+
+/*-----MENU BURGER----*/
+.btn_burger {
+  text-transform: none;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border-top: 1px solid rgba(229, 112, 65, 0.1);
+}
+.btn_burger__click {
+  color: black;
+}
+
+.sidebarMenu {
+  display: none;
+  flex-direction: column;
+  font-size: 22px;
+  z-index: 30;
+  padding: 80px 20px 20px 20px;
+  line-height: 70px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 300px;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  background-color: white;
+}
+
+.sidebarIconToggle {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  display: none;
+}
+
+.spinner {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+
+label > span {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+}
+
+.horizontal {
+  margin-top: 5px;
+}
+
+.diagonal_down {
+  margin-top: 5px;
+}
+
+input[type=checkbox] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+
+input[type=checkbox]:checked ~ .sidebarMenu {
+  transform: translateX(-340px);
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle {
+  position: fixed;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > span:nth-child(2) {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > span:nth-child(1) {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 10px;
+}
+
+input[type=checkbox]:checked ~ .sidebarIconToggle > span:nth-child(3) {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -10px;
 }
 
 /*$background: (
@@ -279,6 +362,13 @@
 }
 .btn__modif--send:hover {
   transform: scale(0.9);
+}
+
+.btn_burger {
+  transition: color 200ms;
+}
+.btn_burger:hover {
+  color: black;
 }
 
 .arrow {
@@ -924,7 +1014,7 @@ section {
   font-size: 25px;
 }
 
-@media all and (max-width: 1150px) {
+@media all and (max-width: 1200px) {
   .content {
     position: static;
     top: 0px;
@@ -941,6 +1031,23 @@ section {
     position: static;
     text-align: center;
     width: 100%;
+  }
+
+  .sidebarIconToggle {
+    display: block;
+  }
+
+  .sidebarMenu {
+    display: flex;
+  }
+
+  .header__navbar {
+    display: none;
+  }
+
+  .header__logo {
+    width: 200px;
+    padding-top: 30px;
   }
 }
 

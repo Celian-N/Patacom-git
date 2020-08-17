@@ -23,19 +23,37 @@
           <a href="homepage.html#contact" class="btn btn__modif">CONTACT</a>
         </nav>
       </header>
+      <!-----MENU BURGER----->
+      <input type="checkbox" id="openSidebarMenu" />
+      <label for="openSidebarMenu" class="sidebarIconToggle">
+        <span class="spinner diagonal_up"></span>
+        <span class="spinner horizontal"></span>
+        <span class="spinner diagonal_down"></span>
+      </label>
+
+      <nav class="sidebarMenu text_bold">
+        <a href="homepage.html" class="btn_burger">AGENCE</a>
+        <a href="team.html" class="btn_burger">ÉQUIPES</a>
+        <a href="services.html" class="btn_burger btn_burger__click"
+          >SERVICES</a
+        >
+        <a href="realisations.html" class="btn_burger">RÉALISATIONS</a>
+        <a href="homepage.html#contact" class="btn_burger">CONTACT</a>
+      </nav>
+      <!---------------->
 
       <p class="service_intro text_bold">
         Nos services pour vous <em>servir</em> !
       </p>
-      
+
       <section class="our_services__list4">
-        <a class="service_defilant" href="#bloc_identite">
+        <a class="service_defilant" href="#bloc_identite" id="tag_identite">
           <img src="../Images/nos_services1.png" alt="IDENTITÉ" />
           <p>IDENTITÉ</p></a
         >
 
-        <aside class="content" id="bloc_identite">
-          <a href="#" class="closemsg text_bold"></a>
+        <aside class="content" id="bloc_identite" >
+          <a href="#tag_identite" class="closemsg text_bold"></a>
           <h2>AUDIT</h2>
           <ul>
             <li>
@@ -52,7 +70,7 @@
           >
         </aside>
 
-        <a class="service_defilant" href="#bloc_audit">
+        <a class="service_defilant" href="#bloc_audit" id="tag_audit">
           <img
             src="../Images/nos_services2.png"
             class="our_services__pictures1--2 lien"
@@ -62,24 +80,24 @@
         >
 
         <aside class="content" id="bloc_audit">
-            <a href="#" class="closemsg text_bold"></a>
-            <h2>AUDIT</h2>
-            <ul>
-              <li>
-                Audit-conseil en stratégie marketing / communication (veille
-                informationnelle, concurrentielle, …)
-              </li>
-              <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
-              <li>Définition de vos indicateurs de performance</li>
-              <li>Analyses de vos besoins web et formations</li>
-            </ul>
-  
-            <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
-              >CONTACTEZ NOUS</a
-            >
-          </aside>
+          <a href="#tag_audit" class="closemsg text_bold"></a>
+          <h2>AUDIT</h2>
+          <ul>
+            <li>
+              Audit-conseil en stratégie marketing / communication (veille
+              informationnelle, concurrentielle, …)
+            </li>
+            <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
+            <li>Définition de vos indicateurs de performance</li>
+            <li>Analyses de vos besoins web et formations</li>
+          </ul>
 
-        <a class="service_defilant" href="#bloc_webmarketing">
+          <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
+            >CONTACTEZ NOUS</a
+          >
+        </aside>
+
+        <a class="service_defilant" href="#bloc_webmarketing" id="tag_webmarketing">
           <img
             src="../Images/nos_services3.png"
             class="our_services__pictures1--3"
@@ -89,91 +107,91 @@
         >
 
         <aside class="content" id="bloc_webmarketing">
-            <a href="#" class="closemsg text_bold"></a>
-            <h2>AUDIT</h2>
-            <ul>
-              <li>
-                Audit-conseil en stratégie marketing / communication (veille
-                informationnelle, concurrentielle, …)
-              </li>
-              <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
-              <li>Définition de vos indicateurs de performance</li>
-              <li>Analyses de vos besoins web et formations</li>
-            </ul>
-  
-            <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
-              >CONTACTEZ NOUS</a
-            >
-          </aside>
+          <a href="#tag_webmarketing" class="closemsg text_bold"></a>
+          <h2>AUDIT</h2>
+          <ul>
+            <li>
+              Audit-conseil en stratégie marketing / communication (veille
+              informationnelle, concurrentielle, …)
+            </li>
+            <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
+            <li>Définition de vos indicateurs de performance</li>
+            <li>Analyses de vos besoins web et formations</li>
+          </ul>
 
-        <a class="service_defilant" href="#bloc_comprint">
+          <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
+            >CONTACTEZ NOUS</a
+          >
+        </aside>
+
+        <a class="service_defilant" href="#bloc_comprint" id="tag_comprint">
           <img src="../Images/nos_services4.png" class="" alt="COM'PRINT" />
           <p>COM'PRINT</p></a
         >
 
         <aside class="content" id="bloc_comprint">
-            <a href="#" class="closemsg text_bold"></a>
-            <h2>AUDIT</h2>
-            <ul>
-              <li>
-                Audit-conseil en stratégie marketing / communication (veille
-                informationnelle, concurrentielle, …)
-              </li>
-              <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
-              <li>Définition de vos indicateurs de performance</li>
-              <li>Analyses de vos besoins web et formations</li>
-            </ul>
-  
-            <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
-              >CONTACTEZ NOUS</a
-            >
-          </aside>
+          <a href="#tag_comprint" class="closemsg text_bold"></a>
+          <h2>AUDIT</h2>
+          <ul>
+            <li>
+              Audit-conseil en stratégie marketing / communication (veille
+              informationnelle, concurrentielle, …)
+            </li>
+            <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
+            <li>Définition de vos indicateurs de performance</li>
+            <li>Analyses de vos besoins web et formations</li>
+          </ul>
 
-        <a class="service_defilant" href="#bloc_siteweb">
+          <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
+            >CONTACTEZ NOUS</a
+          >
+        </aside>
+
+        <a class="service_defilant" href="#bloc_siteweb" id="tag_siteweb">
           <img src="../Images/nos_services5.png" class="" alt="SITE WEB" />
           <p>SITE WEB</p></a
         >
 
         <aside class="content" id="bloc_siteweb">
-            <a href="#" class="closemsg text_bold"></a>
-            <h2>AUDIT</h2>
-            <ul>
-              <li>
-                Audit-conseil en stratégie marketing / communication (veille
-                informationnelle, concurrentielle, …)
-              </li>
-              <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
-              <li>Définition de vos indicateurs de performance</li>
-              <li>Analyses de vos besoins web et formations</li>
-            </ul>
-  
-            <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
-              >CONTACTEZ NOUS</a
-            >
-          </aside>
+          <a href="#tag_siteweb" class="closemsg text_bold"></a>
+          <h2>AUDIT</h2>
+          <ul>
+            <li>
+              Audit-conseil en stratégie marketing / communication (veille
+              informationnelle, concurrentielle, …)
+            </li>
+            <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
+            <li>Définition de vos indicateurs de performance</li>
+            <li>Analyses de vos besoins web et formations</li>
+          </ul>
 
-        <a class="service_defilant" href="#bloc_comweb">
+          <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
+            >CONTACTEZ NOUS</a
+          >
+        </aside>
+
+        <a class="service_defilant" href="#bloc_comweb" id="tag_comweb">
           <img src="../Images/nos_services6.png" class="" alt="COM'WEB" />
           <p>COM'WEB</p></a
         >
 
         <aside class="content" id="bloc_comweb">
-            <a href="#" class="closemsg text_bold"></a>
-            <h2>AUDIT</h2>
-            <ul>
-              <li>
-                Audit-conseil en stratégie marketing / communication (veille
-                informationnelle, concurrentielle, …)
-              </li>
-              <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
-              <li>Définition de vos indicateurs de performance</li>
-              <li>Analyses de vos besoins web et formations</li>
-            </ul>
-  
-            <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
-              >CONTACTEZ NOUS</a
-            >
-          </aside>
+          <a href="#tag_comweb" class="closemsg text_bold"></a>
+          <h2>AUDIT</h2>
+          <ul>
+            <li>
+              Audit-conseil en stratégie marketing / communication (veille
+              informationnelle, concurrentielle, …)
+            </li>
+            <li>Audit de site internet (SEO, structure, vitesse, ...)</li>
+            <li>Définition de vos indicateurs de performance</li>
+            <li>Analyses de vos besoins web et formations</li>
+          </ul>
+
+          <a href="homepage.html#contact" class="btn btn__modif btn__modif--4"
+            >CONTACTEZ NOUS</a
+          >
+        </aside>
       </section>
 
       <hr id="hr__bottom" />

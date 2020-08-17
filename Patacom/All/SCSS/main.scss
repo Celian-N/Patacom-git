@@ -546,7 +546,7 @@ section {
   }
 }
 
-@media all and (max-width: 1150px) /*media quieres*/ {
+@media all and (max-width: 1200px) /*media quieres*/ {
   .content {
     position: static;
     top: 0px;
@@ -562,5 +562,19 @@ section {
     position: static;
     text-align: center;
     width: 100%;
+  }
+  .sidebarIconToggle {
+    display: block;
+  }
+  .sidebarMenu
+  {
+    display: flex;
+  }
+  .header__navbar{
+    display: none;
+  }
+  .header__logo{
+   width: 200px;
+   padding-top: 30px;
   }
 }
