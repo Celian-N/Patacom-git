@@ -1,2 +1,2 @@
 # Patacom-git
-First project on GitHub
+My first website for a fictitious communication agency
