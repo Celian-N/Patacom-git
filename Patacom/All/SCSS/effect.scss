@@ -129,7 +129,8 @@ svg {
   fill: rgba($color: $color-accent, $alpha: 0.5);
 }
 
-input[type="checkbox"] {
+form{
+& input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -138,7 +139,7 @@ input[type="checkbox"] {
   width: 13px;
   border: 1px solid $color-secondary;
 }
-input[type="checkbox"]:checked {
+& input[type="checkbox"]:checked {
   margin: 0px;
 
   &:before {
@@ -153,7 +154,7 @@ input[type="checkbox"]:checked {
     left: 1px;
   }
 }
-
+}
 
 /*input[type="checkbox"].condition {
     display: none;

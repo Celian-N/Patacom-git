@@ -2,203 +2,180 @@
 
 /*-------BOUTON------*/
 
-.btn
-{
-   
-    text-decoration: none;
-    color: rgba($color: $color-secondary, $alpha: 0.5);
-    border-radius: 20px;
-    width: fit-content;
-    
-    &__modif
-    {
-        padding: 10px 30px;
-        background-color: $color-accent;
-        color: rgba($color: $color-secondary, $alpha: 1);
-        &--link
-        {
-            font-size: map-get($font-size, text);
-        }
-        &--send
-        {
-            margin-top: 20px;
-            color: $color-accent;
-            padding: 15px 50px;
-            background-color: $color-secondary;
-            border: 2px solid rgba($color: #000000, $alpha: 0);
-            border-radius: 10px;
-        }
-        &--4
-        {
-            margin-top: 40px;
-            font-size: map-get($font-size, footer);
-        }
-    } 
-    &__click
-    {
-        border-bottom: 3px solid $color-accent;
-        border-radius: 2px;
-        color: rgba($color: $color-secondary, $alpha: 1.0);
-    }
+.btn {
+  text-decoration: none;
+  color: rgba($color: $color-secondary, $alpha: 0.5);
+  border-radius: 20px;
+  width: fit-content;
 
-} 
-.btn__footer
-{
-    text-decoration: none;
-    color: rgba($color: $color-secondary, $alpha: 1.0);
+  &__modif {
+    padding: 10px 30px;
+    background-color: $color-accent;
+    color: rgba($color: $color-secondary, $alpha: 1);
+    &--link {
+      font-size: map-get($font-size, text);
+    }
+    &--send {
+      margin-top: 20px;
+      color: $color-accent;
+      padding: 15px 50px;
+      background-color: $color-secondary;
+      border: 2px solid rgba($color: #000000, $alpha: 0);
+      border-radius: 10px;
+    }
+    &--4 {
+      margin-top: 40px;
+      font-size: map-get($font-size, footer);
+    }
+  }
+  &__click {
+    border-bottom: 3px solid $color-accent;
+    border-radius: 2px;
+    color: rgba($color: $color-secondary, $alpha: 1);
+  }
+}
+.btn__footer {
+  text-decoration: none;
+  color: rgba($color: $color-secondary, $alpha: 1);
 }
 
 /*-----TRAITS----*/
 
+.line__team {
+  text-align: left;
+  width: 200px;
+  margin-top: -20px;
 
-.line__team
-{
-    text-align: left;
+  #hr__team {
     width: 200px;
-    margin-top: -20px;
-
-    #hr__team
-{
-	width:200px;
-	background-color: $color-accent;
+    background-color: $color-accent;
     height: 3px;
     border: 0;
     border-radius: 3px;
-}
-}
-
-
-
-#hr__services
-{
-	width:100px;
-	background-color: $color-secondary;
-    height: 3px;
-    border: 0;
-    border-radius: 3px;
-    margin-top: -30px;
-    margin-bottom: 20px;
+  }
 }
 
+#hr__services {
+  width: 100px;
+  background-color: $color-secondary;
+  height: 3px;
+  border: 0;
+  border-radius: 3px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
 
-.line__contact
-{
-    text-align: left;
+.line__contact {
+  text-align: left;
+  width: 100px;
+  margin-top: -30px;
+
+  #hr__contact {
     width: 100px;
-    margin-top: -30px;
-
-    #hr__contact
-{
-	width:100px;
-	background-color: $color-accent;
+    background-color: $color-accent;
     height: 3px;
     border: 0;
     border-radius: 3px;
-}
+  }
 }
 
-#hr__bottom
-{
-	width:80%;
-	background-color: $color-accent;
-    height: 3px;
-    border: 0;
-    border-radius: 3px;
-    margin-top: 50px;
+#hr__bottom {
+  width: 80%;
+  background-color: $color-accent;
+  height: 3px;
+  border: 0;
+  border-radius: 3px;
+  margin-top: 50px;
 }
 /*-----MENU BURGER----*/
-.btn_burger{
-	text-transform: none;
-	text-decoration: none;
-	color: rgba($color: $color-primary, $alpha: 0.4);
-	cursor: pointer;
-    border-top: 1px solid rgba($color-accent, 0.1);
-    &__click{
-        color: $color-primary;
-    }
+.btn_burger {
+  text-transform: none;
+  text-decoration: none;
+  color: rgba($color: $color-primary, $alpha: 0.4);
+  cursor: pointer;
+  border-top: 1px solid rgba($color-accent, 0.1);
+  &__click {
+    color: $color-primary;
+  }
 }
 
-
 .sidebarMenu {
-	display:none;
-    flex-direction: column; 
-    
+  display: none;
+  flex-direction: column;
 
-    
-    font-size: map-get($font-size, text );
-    z-index: 30;
-    padding: 80px 20px 20px 20px;
+  font-size: map-get($font-size, text);
+  z-index: 30;
+  padding: 80px 20px 20px 20px;
 
-
-    line-height: 70px;
-     height: 100%;
-    position: fixed;
-    top: 0;
-    right: -340px;
-    width: 300px;
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
-    background-color:$color-secondary;
+  line-height: 70px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 300px;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  background-color: $color-secondary;
 }
 
 .sidebarIconToggle {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    cursor: pointer;
-    position: absolute;
-    z-index: 99;
-    top: 30px;
-    right: 30px;
-    height: 30px;
-    width: 30px;
-    display: none;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  display: none;
 }
 .spinner {
-    height: 3px;
-    width: 100%;
-    background-color: $color-primary;
+  height: 3px;
+  width: 100%;
+  background-color: $color-primary;
 }
-label > span{
-	transition: all 0.3s;
-    box-sizing: border-box;
-    position: relative;
-    float: left;
-
+label > span {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
 }
 .horizontal {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .diagonal_down {
-    margin-top: 5px;
+  margin-top: 5px;
 }
-
-input[type=checkbox] {
+main {
+  & > input[type="checkbox"] {
     transition: all 0.3s;
     box-sizing: border-box;
     display: none;
-}
-input[type="checkbox"]:checked ~ .sidebarMenu {
+  }
+  & > input[type="checkbox"]:checked ~ .sidebarMenu {
     transform: translateX(-340px);
-}
-input[type="checkbox"]:checked ~ .sidebarIconToggle {
-    position:fixed;
-}
+  }
+  & > input[type="checkbox"]:checked ~ .sidebarIconToggle {
+    position: fixed;
+  }
 
-input[type=checkbox]:checked ~ .sidebarIconToggle > span:nth-child(2) {
+  & > input[type="checkbox"]:checked ~ .sidebarIconToggle > span:nth-child(2) {
     transition: all 0.3s;
     box-sizing: border-box;
     opacity: 0;
-}
-input[type=checkbox]:checked ~ .sidebarIconToggle > span:nth-child(1) {
+  }
+  & > input[type="checkbox"]:checked ~ .sidebarIconToggle > span:nth-child(1) {
     transition: all 0.3s;
     box-sizing: border-box;
     transform: rotate(135deg);
     margin-top: 10px;
-}
-input[type=checkbox]:checked ~ .sidebarIconToggle > span:nth-child(3) {
+  }
+  & > input[type="checkbox"]:checked ~ .sidebarIconToggle > span:nth-child(3) {
     transition: all 0.3s;
     box-sizing: border-box;
     transform: rotate(-135deg);
     margin-top: -10px;
+  }
 }

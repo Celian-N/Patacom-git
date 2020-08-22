@@ -60,7 +60,7 @@ body {
 .body__back {
   background: url("../Images/fond_container1bis.png") scroll no-repeat;
   background-position: top right;
-  background-size: 900px;
+  background-size: 60%;
 }
 em {
   font-style: normal;
@@ -553,8 +553,7 @@ section {
     margin-bottom: 50px;
     margin-top: -50px;
   }
-  .our_services__list4
-  {
+  .our_services__list4 {
     width: 50%;
     margin: 0 25%;
   }
@@ -566,15 +565,43 @@ section {
   .sidebarIconToggle {
     display: block;
   }
-  .sidebarMenu
-  {
+  .sidebarMenu {
     display: flex;
   }
-  .header__navbar{
+  .header__navbar {
     display: none;
   }
-  .header__logo{
-   width: 200px;
-   padding-top: 30px;
+  .header__logo {
+    width: 200px;
+    padding-top: 30px;
   }
+  body,
+  .ovale, .body__back {
+    background: $color-quaternary;
+  }
+  .container{
+    background: url("../Images/fond_real.png") scroll no-repeat;
+    background-position: top right;
+    background-size: 1100px 650px;
+  }
+  .our_team {
+    flex-wrap: wrap-reverse;
+    text-align: justify;
+    justify-content: flex-start;
+    &__presentation {
+      padding-left: 50px;
+    }
+  }
+}
+@media all and (max-width: 950px) {
+  .contact__shapes {
+    display: none;
+  }
+  .back_anime{
+    display: none;
+  }
+  .intro_social{
+    overflow: hidden;
+  }
+  
 }
